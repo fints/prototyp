@@ -21,7 +21,8 @@ with header:
     st.text('In this project I look into the implementation of irrationality')
     st.text('into the portfolio allocation process.')
     st.text('')
-    st.text('Please note that the data shown is not the actual data. They are to be used for illustrative purposes only.')
+    st.text('Please note that the data shown is not the actual data.')
+    st.text('They are to be used for illustrative purposes only.')
     st.text('')
 
 
