@@ -49,14 +49,14 @@ with dataset:
 
     if region == 'US 500':
 
-        df = pd.read_csv('data/sp500_irrationality.csv')
+        df = pd.read_csv('data/us500.csv')
         stock_data = pd.DataFrame([df.Name, df.Ticker]).transpose()
         boundaries = np.linspace(0, stock_data.shape[0], 5).round()
         zero, first, second, third, fourth = int(boundaries[0]), int(boundaries[1]), int(boundaries[2]), int(boundaries[3]), int(boundaries[4]) 
    
     else: 
 
-        df = pd.read_csv('data/dax_irrationality.csv')
+        df = pd.read_csv('data/germany40.csv')
         stock_data = pd.DataFrame([df.Name, df.Ticker]).transpose()
         boundaries = np.linspace(0, stock_data.shape[0], 5).round()
         zero, first, second, third, fourth = int(boundaries[0]), int(boundaries[1]), int(boundaries[2]), int(boundaries[3]), int(boundaries[4]) 
