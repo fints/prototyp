@@ -29,6 +29,8 @@ with header:
 with crisis_indicator:
     st.header("1. Let's have a look at the economic outlook")
     
+    st.text('')
+
     cp = pd.read_csv('data/crisis_probability.txt', sep=" ", header=None)
     x = cp.values[0]
     if x == 1:
