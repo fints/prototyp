@@ -26,7 +26,7 @@ with header:
 with crisis_indicator:
     st.header("1. Let's have a look at the economic outlook")
     
-    cp = pd.read_csv(r'C:\Users\Tobey\Documents\WPy64-3830\notebooks\Backtest\Prototyp\Berechnung\crisis_probability.txt', sep=" ", header=None)
+    cp = pd.read_csv(r'\crisis_probability.txt', sep=" ", header=None)
     x = cp.values[0]
     if x == 1:
         st.success('The probability of a severe econonomic crisis within the next six months is minimal')
@@ -49,14 +49,14 @@ with dataset:
 
     if region == 'US 500':
 
-        df = pd.read_csv(r'C:\Users\Tobey\Documents\WPy64-3830\notebooks\Backtest\Prototyp\Berechnung\sp500_irrationality.csv')
+        df = pd.read_csv(r'\sp500_irrationality.csv')
         stock_data = pd.DataFrame([df.Name, df.Ticker]).transpose()
         boundaries = np.linspace(0, stock_data.shape[0], 5).round()
         zero, first, second, third, fourth = int(boundaries[0]), int(boundaries[1]), int(boundaries[2]), int(boundaries[3]), int(boundaries[4]) 
    
     else: 
 
-        df = pd.read_csv(r'C:\Users\Tobey\Documents\WPy64-3830\notebooks\Backtest\Prototyp\Berechnung\dax_irrationality.csv')
+        df = pd.read_csv(r'\dax_irrationality.csv')
         stock_data = pd.DataFrame([df.Name, df.Ticker]).transpose()
         boundaries = np.linspace(0, stock_data.shape[0], 5).round()
         zero, first, second, third, fourth = int(boundaries[0]), int(boundaries[1]), int(boundaries[2]), int(boundaries[3]), int(boundaries[4]) 
