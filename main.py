@@ -17,7 +17,7 @@ def get_data(filename):
     return stock_data
 
 
-image = Image.open('resources/Three Buttons')
+image = Image.open('resources/Three Buttons.png')
 st.sidebar.image(image, width=300, output_format='PNG')
 
 
