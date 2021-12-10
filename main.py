@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
+from PIL import Image
 
 # Set structure of the site
 header = st.container()
@@ -14,6 +15,10 @@ dataset = st.container()
 def get_data(filename):
     stock_data = pd.read_csv(filename, sep=',')
     return stock_data
+
+
+image = Image.open('resources/Three Buttons')
+st.sidebar.image(image, width=300, output_format='PNG')
 
 
 with header:
